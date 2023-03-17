@@ -1,0 +1,534 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Data\\Web3raffle.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Abstractions\\Web3raffle.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Abstractions\\Web3raffle.Abstractions.csproj",
+        "projectName": "Web3raffle.Abstractions",
+        "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Abstractions\\Web3raffle.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\goods\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\NuGet.Config",
+          "C:\\Users\\goods\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Utilities\\Web3raffle.Utilities.csproj": {
+                "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Utilities\\Web3raffle.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Orleans.Sdk": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Data\\Web3raffle.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Data\\Web3raffle.Data.csproj",
+        "projectName": "Web3raffle.Data",
+        "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Data\\Web3raffle.Data.csproj",
+        "packagesPath": "C:\\Users\\goods\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\NuGet.Config",
+          "C:\\Users\\goods\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Abstractions\\Web3raffle.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Abstractions\\Web3raffle.Abstractions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Ical.Net": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.Orleans.Sdk": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Nethereum.Util": {
+              "target": "Package",
+              "version": "[4.13.0, )"
+            },
+            "TweetinviAPI": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Models\\Web3raffle.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Models\\Web3raffle.Models.csproj",
+        "projectName": "Web3raffle.Models",
+        "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Models\\Web3raffle.Models.csproj",
+        "packagesPath": "C:\\Users\\goods\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\NuGet.Config",
+          "C:\\Users\\goods\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Azure.Search.Documents": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.20.0, )"
+            },
+            "FastEndpoints.Attributes": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "Microsoft.Orleans.Sdk": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Shared\\Web3raffle.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Shared\\Web3raffle.Shared.csproj",
+        "projectName": "Web3raffle.Shared",
+        "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Shared\\Web3raffle.Shared.csproj",
+        "packagesPath": "C:\\Users\\goods\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\NuGet.Config",
+          "C:\\Users\\goods\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Models\\Web3raffle.Models.csproj": {
+                "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Models\\Web3raffle.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Orleans.Sdk": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Toolbelt.Blazor.HttpClientInterceptor": {
+              "target": "Package",
+              "version": "[10.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Utilities\\Web3raffle.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Utilities\\Web3raffle.Utilities.csproj",
+        "projectName": "Web3raffle.Utilities",
+        "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Utilities\\Web3raffle.Utilities.csproj",
+        "packagesPath": "C:\\Users\\goods\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\NuGet.Config",
+          "C:\\Users\\goods\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json": {},
+          "https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Shared\\Web3raffle.Shared.csproj": {
+                "projectPath": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Shared\\Web3raffle.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "DebounceThrottle": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "FastEndpoints.Security": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "FastEndpoints.Swagger": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "Google.Apis.Sheets.v4": {
+              "target": "Package",
+              "version": "[1.58.0.2826, )"
+            },
+            "JsonSubTypes": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "LigerShark.WebOptimizer.Core": {
+              "target": "Package",
+              "version": "[3.0.372, )"
+            },
+            "Microsoft.ApplicationInsights": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            },
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            },
+            "Microsoft.Azure.AppConfiguration.AspNetCore": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.31.2, )"
+            },
+            "Microsoft.Azure.SignalR": {
+              "target": "Package",
+              "version": "[1.19.2, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[4.49.0, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.49.1, )"
+            },
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[1.25.10, )"
+            },
+            "Microsoft.OData.Core": {
+              "target": "Package",
+              "version": "[7.13.0, )"
+            },
+            "Microsoft.Orleans.Client": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Orleans.Clustering.AzureStorage": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Orleans.Core.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Orleans.Persistence.AzureStorage": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Orleans.Sdk": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Orleans.Server": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MyOddWeb.DirectoryWatcher": {
+              "target": "Package",
+              "version": "[0.1.9, )"
+            },
+            "Nethereum.Hex": {
+              "target": "Package",
+              "version": "[4.12.0, )"
+            },
+            "OrleansDashboard": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Otp.NET": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            },
+            "Serialize.Linq": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            },
+            "Slugify.Core": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "TweetinviAPI": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "WebMarkupMin.AspNetCore6": {
+              "target": "Package",
+              "version": "[2.13.5, )"
+            },
+            "WebMarkupMin.NUglify": {
+              "target": "Package",
+              "version": "[2.13.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Web3raffle.Web..Client
+build_property.RootNamespace = Web3raffle.Web..Client
+build_property.ProjectDir = C:\Users\goods\OneDrive\Documents\Dev\Projects\web3raffle.orlean\Web3Raffle.Web.Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\goods\OneDrive\Documents\Dev\Projects\web3raffle.orlean\Web3Raffle.Web.Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Pages/Admin/CreateEditRaffle.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3JlYXRlRWRpdFJhZmZsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Pages/Admin/Raffles.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmFmZmxlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Pages/PrivacyPolicy.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeVBvbGljeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Pages/ProjectDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Pages/RaffleDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmFmZmxlRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Pages/TermOfUse.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVybU9mVXNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/ExploreRaffle.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4cGxvcmVSYWZmbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/FeatureRaffle.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZlYXR1cmVSYWZmbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/Layouts/BaseLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExheW91dHNcQmFzZUxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/Layouts/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExheW91dHNcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/Modals/ActivityLogModal.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vZGFsc1xBY3Rpdml0eUxvZ01vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/Modals/AddEntrantModal.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vZGFsc1xBZGRFbnRyYW50TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/Modals/DidIWinModal.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vZGFsc1xEaWRJV2luTW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/Pagination.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFBhZ2luYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/MainHero.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5IZXJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-u9hf4cpjod
+
+[C:/Users/goods/OneDrive/Documents/Dev/Projects/web3raffle.orlean/Web3Raffle.Web.Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-k5h5yw3fff

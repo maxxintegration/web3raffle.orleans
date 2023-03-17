@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Web3raffle.Web..Client.props" />
+</Project>

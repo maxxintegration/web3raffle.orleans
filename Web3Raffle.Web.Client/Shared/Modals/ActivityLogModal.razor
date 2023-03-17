@@ -1,0 +1,113 @@
+﻿@if (ShowDialog)
+{
+    <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <!--
+          Background backdrop, show/hide based on modal state.
+
+          Entering: "ease-out duration-300"
+            From: "opacity-0"
+            To: "opacity-100"
+          Leaving: "ease-in duration-200"
+            From: "opacity-100"
+            To: "opacity-0"
+        -->
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <!--
+                  Modal panel, show/hide based on modal state.
+
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    To: "opacity-100 translate-y-0 sm:scale-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100 translate-y-0 sm:scale-100"
+                    To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                -->
+                <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6 h-[680px]">
+                    <div class="m-[20px]">
+
+                        <!--
+                          This example requires some changes to your config:
+
+                          ```
+                          // tailwind.config.js
+                          module.exports = {
+                            // ...
+                            plugins: [
+                              // ...
+                              require('@tailwindcss/forms'),
+                            ],
+                          }
+                          ```
+                        -->
+                        <!--
+                          This example requires updating your template:
+
+                          ```
+                          <html class="h-full bg-gray-50">
+                          <body class="h-full">
+                          ```
+                        -->
+                        <div class="flex min-h-full flex-col justify-center pt-[15px]">
+                            <div class="sm:w-full">
+                                <h2 class="text-left text-xl font-bold tracking-tight text-title-color mb-[15px]">Activity Log</h2>
+                                <h2 class="text-left text-3xl font-bold tracking-tight text-title-color mb-[15px]">@Raffle.Name</h2>
+                            </div>
+
+                            <div class="sm:w-full">
+
+                                @if (EventLogs.Count == 0)
+                                {
+                                    <div class="relative h-[50px] text-center">
+                                        <div class="relative lds-ellipsis top-[-20px]"><div></div><div></div><div></div><div></div></div>
+                                    </div>
+                                }
+                                else
+                                {
+
+                                    <div class="bg-white py-4 h-[410px]">
+                                        <ul class="overflow-x-hidden overflow-y-auto h-[400px] text-[15px] thin-scrollbar">
+                                            @{
+                                                int count = 0;
+                                                foreach (var item in EventLogs)
+                                                {
+                                                    count++;
+
+                                                    <li class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-12 @(count % 2 == 1 ? "tr-alt-color" : "")">
+                                                        <div class="sm:col-span-4">
+                                                            @String.Format("{0:MM/dd/yyyy hh:mm:ss}", item.CreatedAt.ToLocalTime())
+                                                        </div>
+
+                                                        <div class="sm:col-span-8 font-bold">
+                                                            @item.LogMessage
+                                                        </div>
+                                                    </li>
+
+
+                                                }
+
+                                            }
+                                        </ul>
+                                    </div>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (EventLogs.Count > 0)
+                    {
+                        <div class="mt-[50px] flex">
+                            <div class="w-[100%] h-[50px] text-right">
+                                <a @onclick="Close" class="justify-center px-4 py-2 text-base font-medium text-sky-400 cursor-pointer sm:mt-0 sm:text-sm">Cancel</a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+}

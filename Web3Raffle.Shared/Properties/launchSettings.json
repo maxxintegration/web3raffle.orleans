@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "VeeFriends.Shared": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54301;http://localhost:54302"
+    }
+  }
+}

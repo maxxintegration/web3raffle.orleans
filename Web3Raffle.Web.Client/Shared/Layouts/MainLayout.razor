@@ -1,0 +1,19 @@
+﻿@inherits MainLayoutBase
+@layout BaseLayout
+
+
+<header class="bg-hero relative web3-navbar">
+    <nav>
+        <div class="h-[5.813rem] mobile:h-16 mx-auto max-w-9xl px-4 sm:px-6 lg:px-8 relative z-50 flex justify-between py-0">
+            <div class="navbar-logo relative z-10 my-0 mx-auto mobile:mx-0 gap-16">
+                <a href="/" class="relative top-[0.625rem]" aria-label="Home">
+                    <img class="h-[100px]" src="/img/logo.png" />
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="bg-white relative mx-auto pt-[30px] pb-[10px] mt-[50px]">
+    @Body
+</main>

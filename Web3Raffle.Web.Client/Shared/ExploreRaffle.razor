@@ -1,0 +1,175 @@
+﻿@using BlazorMaterialIcons
+@using Web3raffle.Models.Enums;
+<section class="relative mx-auto bg-[#FAFAFA]">
+    <div class="relative max-w-9xl mx-auto pb-[50px] pt-[40px] @(string.IsNullOrEmpty(ProjectId) ? "mb-[-10px] mt-[-30px]" : "mb-[25px]")">
+
+        @*RAFFLE SECTION TITLE*@
+        <div>
+            <h2 class="text-title font-bold tracking-wide text-title-color text-center mb-3 px-10">
+                @if (string.IsNullOrEmpty(ProjectId))
+                {
+                    <span>Explore Web3Raffles</span>
+                }
+                else
+                {
+                    <span class="block pb-[30px]">Current Raffles</span>
+                }
+            </h2>
+            @if (string.IsNullOrEmpty(ProjectId))
+            {
+                <p class="mt-1 md:w-4/12 w-3/4 tracking-tight text-center mx-auto mb-[50px]">Explore the different projects using our platform and join their raffle for your chance to get on their allowlist.</p>
+            }
+
+            @if (!this.IsInitialLoad)
+            {
+                <div class="relative flex py-0 px-10 items-center max-w-[95.5rem] my-0 mx-auto">
+                    <div class="flex-grow border-t border-gray-200"></div>
+                    <div class="flex-grow border-t border-gray-200"></div>
+                </div>
+            }
+        </div>
+
+        @if (!this.IsInitialLoad)
+        {
+            @*RAFFLE FILTER*@
+            <div class="relative max-w-[95.5rem] mx-auto xs:px-8 px-4 mb-10 mt-5">
+                <div class="relative gap-y-16 gap-x-8 sm:px-2">
+                    @*<div class="min-w-0 max-w-2xl flex-auto px-0 py-1 lg:max-w-none pt-8 md:pt-1">
+                <div class="items-center">
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                </div>
+                <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-sm focus:ring-gray-300 focus:border-gray-400 block w-full pl-10 p-1.5" placeholder="Search" />
+                </div>
+                </div>
+                </div>*@
+                    @* <div class="min-w-0 max-w-2xl flex-auto px-1 py-1 md:max-w-none">
+
+                </div>*@
+                    <div class="flex px-1 py-1 justify-end">
+                        <div class="grid grid-cols-1 md:flex uppercase">
+                            <div class="md:flex-none md:w-40 font-semibold md:text-right pl-7 md:pr-8 pt-1.5">
+                                Status
+                            </div>
+                            <div class="pl-[25px] md:pl-0 md:flex-initial font-semibold">
+                                <div class="mt-1 sm:col-span-2 sm:mt-0">
+                                    <select id="raffleStatus" name="Status" @onchange="@OnStatusSelect" autocomplete="status" class="block w-full max-w-lg rounded-sm border-gray-300 shadow-sm focus:border-gray-400 focus:ring-gray-300 py-2 sm:max-w-xs text-gray-500 text-xs uppercase">
+                                        <option value="-1">All</option>
+                                        <option value="0">Up Coming</option>
+                                        <option value="1">In Progress</option>
+                                        <option value="2">Raffle Ended</option>
+                                        <option value="3">Winner Drawn</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:flex text-sm text-sm uppercase mr-[15px]">
+                            <div class="md:flex-none md:w-40 font-semibold md:text-right pl-7 md:pr-8 pt-1.5">
+                                Sort By
+                            </div>
+                            <div class="pl-[25px] md:pl-0 md:flex-initial font-semibold">
+                                <div class="mt-1 sm:col-span-2 sm:mt-0">
+                                    <select id="orderBy" name="order-by" @onchange="@OnOrderBySelect" autocomplete="order-by" class="block w-full max-w-lg rounded-sm border-gray-300 shadow-sm focus:border-gray-400 focus:ring-gray-300 py-2 sm:max-w-xs text-gray-500 text-xs uppercase">
+                                        <option value="1">Newly Listed</option>
+                                        <option value="2">Ending Soon</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*RAFFLE LIST*@
+            <div class="relative max-w-9xl flex flex-wrap justify-center gap-y-12 gap-x-5 px-8 mb-[30px]">
+
+                @foreach (var item in Raffles)
+                {
+
+                    <div class="w-[100%] sm:w-[21.625rem] text-left flex flex-col justify-between">
+                        @* h-[17.5rem]*@
+                        <div>
+                            <div class="group relative transform overflow-hidden rounded-[0.25rem] mb-[0.938rem] h-[17.688rem]">
+                                <NavLink id="raffle-image-lbtn" href="@GotoRaffleEntrant(item)" Match="NavLinkMatch.All">
+                                    <div class="absolute top-0 left-0 right-4 bottom-6 rounded-3xl transition duration-300 group-hover:scale-95 xl:right-6"></div>
+                                    <div class="absolute inset-0" style="">
+                                        <img alt="" sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw" srcset="" src="@item.RaffleBannerUrl" width="1120" height="560" decoding="async" data-nimg="future" class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110" style="color:transparent" />
+                                    </div>
+
+                                    <span class="absolute left-2.5 top-2.5 py-1.5 px-2.5 text-xl text-center whitespace-nowrap align-baseline font-bold bg-gray-200 rounded">
+                                        <span class="block text-slate-900 mb-0">@String.Format("{0:MMM}", item.StartDate.ToLocalTime())</span>
+                                        <span class="block text-sky-500">@String.Format("{0:MM-dd}", item.StartDate.ToLocalTime())</span>
+                                    </span>
+                                </NavLink>
+                            </div>
+
+                            <div class="flex items-center">
+
+                                <div class="h-[30px] w-[30px] flex-shrink-0">
+                                    <NavLink id="raffle-title-lbtn" href="@GotoProjectDetails(item.ProjectName)" Match="NavLinkMatch.All">
+                                        <img class="h-[30px] w-[30px] rounded-full border-[#dddddd]" src="@(string.IsNullOrEmpty(item.RaffleIconUrl) ? "img/android-chrome-96x96.png" : item.RaffleIconUrl)" alt="project icon">
+                                    </NavLink>
+                                </div>
+                                <div class="ml-3.5">
+                                    <div class="font-bold text-title-color text-lg leading-[24.2px]"><NavLink id="raffle-title-lbtn" href="@GotoProjectDetails(item.ProjectName)" Match="NavLinkMatch.All">@item.ProjectName</NavLink></div>
+                                </div>
+
+                            </div>
+
+                            <h3 class="mt-4 mb-4 font-display text-lg font-bold tracking-tight text-title-color">
+                                <NavLink id="raffle-title-lbtn" href="@GotoRaffleEntrant(item)" Match="NavLinkMatch.All">
+                                    @item.Name
+                                </NavLink>
+                            </h3>
+                        </div>
+                        <div>
+                            <ul class="grid mb-2">
+                                <li class="mb-[10px] text-base uppercase grid grid-cols-10">
+                                    <span class="col-span-1 text-sky-500">
+                                        <MaterialIcon Theme="@MaterialIcon.Themes.Outlined" Size="16">timer</MaterialIcon>
+                                    </span>
+                                    <span class="col-span-9">
+                                        @String.Format("{0:M/d/yyyy}", item.StartDate.ToLocalTime()) - @String.Format("{0:M/d/yyyy}", item.EndDate!.Value.ToLocalTime())
+                                    </span>
+                                </li>
+                                <li class="mb-[10px] text-base uppercase grid grid-cols-10">
+                                    <span class="col-span-1 text-sky-500">
+                                        <MaterialIcon Theme="@MaterialIcon.Themes.Outlined" Size="16">local_activity</MaterialIcon>
+                                    </span>
+                                    <span class="col-span-9">
+                                        @(item.EnableMaxEntrant ? (item.MaxEntrant - item.NumberOfEntrants) : 0) Spots Available
+                                    </span>
+                                </li>
+                                @*<li class="mb-[10px] text-base uppercase">
+                        <i class="fa-solid fa-list-check mr-3 text-sky-500"></i><span>S1 RED DEVIL TOKEN REQUIRED</span>
+                        </li>*@
+                                <li class="mb-[10px] text-base uppercase grid grid-cols-10">
+                                    <span class="col-span-1 text-sky-500">
+                                        <MaterialIcon Theme="@MaterialIcon.Themes.Outlined" Size="16">show_chart</MaterialIcon>
+                                    </span>
+                                    <span class="col-span-9">
+                                        Raffle @(item.EndDate < DateTimeOffset.UtcNow && item.Status == RaffleStatus.InProgress ? "End" : item.Status == RaffleStatus.InProgress ? "In Progress" : item.Status.ToString())
+                                    </span>
+                                </li>
+                            </ul>
+                            <em class="text-base">@item.NumberOfEntrants people have entered this raffle</em>
+                        </div>
+                    </div>
+
+                }
+
+
+            </div>
+
+        }
+        else
+        {
+            <div class="text-center"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+        }
+
+        <Pagination @ref="PaginationComponent" PageSize="@DefaultPageSize" Length="@DefaultLength" OnPaging="GetRaffles" />
+
+    </div>
+</section>

@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "VeeFriends.Silo": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:55038;http://localhost:55039"
+    }
+  }
+}

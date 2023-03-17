@@ -1,0 +1,387 @@
+﻿@page "/{projectName}/{year:int}/{month}/{day}/{raffleTitle}"
+@using BlazorMaterialIcons
+@using Web3raffle.Models.Enums;
+
+<section class="relative max-w-9xl mx-auto mt-[-2.5rem] mobile:mt-[0]">
+    @*TOP SECTION*@
+    <div class="relative grid grid-cols-12 gap-y-16 gap-x-8 xs:px-8 px-[1.25rem] mobile:px-[1.875rem]">
+
+        <div class="col-span-12 lg:col-span-6 px-1 py-1">
+
+            @if (IsInitialLoad)
+            {
+                <div class="group relative transform overflow-hidden rounded-[0.75rem] h-[14.063rem] mobile:h-[27.125rem]">
+                    <div class="lds-ripple top-[37%] left-[45%]"><div></div><div></div></div>
+                </div>
+            }
+            else
+            {
+                <div class="group relative transform overflow-hidden rounded-[0.75rem] h-[14.063rem] mobile:h-[27.125rem]">
+                    <div class="absolute top-0 left-0 right-4 bottom-6 rounded-3xl transition duration-300 group-hover:scale-95 xl:right-6"></div>
+                    <div class="absolute inset-0" style="">
+                        <img alt="Raffle Banner" sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw" srcset="" src="@Raffle.RaffleBannerUrl" width="1120" height="560" decoding="async" data-nimg="future" class="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110" style="color:transparent" />
+                    </div>
+                    <span class="absolute left-2.5 top-2.5 py-1.5 px-2.5 text-2xl text-center whitespace-nowrap align-baseline font-bold bg-gray-200 rounded">
+                        <span class="block text-slate-900">@String.Format("{0:MMM}", Raffle.StartDate.ToLocalTime())</span>
+                        <span class="block text-sky-500">@String.Format("{0:MM-dd}", Raffle.StartDate.ToLocalTime())</span>
+                    </span>
+                </div>
+
+                @*screen size 475*@
+                <div class="pb-0 pl-0 pt-[20px] block mobile:hidden">
+
+                    <h2 class="mt-4 mb-8 font-display text-title font-bold text-title-color">@Raffle.Name</h2>
+
+                    <div class="flex items-center mb-[20px] text-xl">
+
+                        <div class="h-[30px] w-[30px] flex-shrink-0">
+                            <NavLink id="raffle-title-lbtn" href="@GotoProjectDetails(Raffle.ProjectName)" Match="NavLinkMatch.All">
+                                <img class="h-[30px] w-[30px] rounded-full border-[#dddddd]" src="@(string.IsNullOrEmpty(Raffle.RaffleIconUrl) ? "img/android-chrome-96x96.png" : Raffle.RaffleIconUrl)" alt="project icon">
+                            </NavLink>
+                        </div>
+                        <div class="ml-3.5">
+                            <div class="font-bold text-title-color"><NavLink id="raffle-title-lbtn" href="@GotoProjectDetails(Raffle.ProjectName)" Match="NavLinkMatch.All">@Raffle.ProjectName</NavLink></div>
+                        </div>
+
+                    </div>
+
+                    <div class="relative flex flex-wrap justify-left gap-y-12 gap-x-5 px-8 pl-0 mb-[20px]">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=@CurrentUrlEncode" title="Share on Facebook" target="_blank" rel="noopener noreferrer nofollow" class="font-bold text-color-primary mr-[10px] text-base"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=@CurrentUrlEncode&text=@RaffleTitleEncode" title="Share on Twitter" target="_blank" rel="noopener noreferrer nofollow" class="font-bold text-color-primary mr-[10px] text-base"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="mailto:?subject=@Raffle.Name.Replace(" ", "%20")&amp;body=@CurrentUrlEncode" title="Email" target="_blank" rel="noopener noreferrer nofollow" class="font-bold text-color-primary mr-[10px] text-base"><i class="fa-solid fa-envelope"></i></a>
+                        <button @onclick="DownloadCalendar" class="uppercase font-bold text-color-primary text-base" title="Download Calendar"><i class="fa-regular fa-calendar-plus"></i></button>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+
+        <div class="col-span-12 lg:col-span-6 px-1 py-1">
+            <div class="flex flex-col justify-between rounded-[0.75rem] shadow-custom p-[30px] sm:p-16 h-[27.125rem]">
+                <div class="w-[100%]">
+                    <ul class="text-base mb-8">
+                        <li class="mb-[15px]">
+                            <span class="lg:flex uppercase">
+                                <span class="flex flex-row text-sky-500 font-semibold lg:flex-none lg:w-48">
+                                    <span class="w-[30px] text-sky-500">
+                                        <MaterialIcon Theme="@MaterialIcon.Themes.Outlined" Size="16">timer</MaterialIcon>
+                                    </span>
+                                    <span class="col-span-7">Start & End</span>
+                                </span>
+
+                                <span class="pl-[30px] lg:pl-0 lg:flex-initial font-semibold block">
+                                    <span class="whitespace-nowrap">@String.Format("{0:MM/dd/yyyy hh:mm tt}", Raffle.StartDate.ToLocalTime())</span> <span>-</span>  <span class="whitespace-nowrap">@(Raffle.EndDate.HasValue ? String.Format("{0:MM/dd/yyyy hh:mm tt}", Raffle.EndDate.Value.ToLocalTime()) : "TBD")</span> <span>EST</span>
+                                </span>
+                            </span>
+                        </li>
+                        @if (Raffle.EnableMaxEntrant)
+                        {
+                            <li class="mb-[15px]">
+                                <span class="lg:flex uppercase">
+                                    <span class="flex flex-row text-sky-500 font-semibold lg:flex-none lg:w-48">
+                                        <span class="w-[30px] text-sky-500">
+                                            <MaterialIcon Theme="@MaterialIcon.Themes.Outlined" Size="16">local_activity</MaterialIcon>
+                                        </span>
+                                        <span class="col-span-7">Available Spots</span>
+                                    </span>
+                                    <span class="pl-[30px] lg:pl-0 lg:flex-initial font-semibold">
+                                        @(Raffle.MaxEntrant - Raffle.NumberOfEntrants)
+                                    </span>
+                                </span>
+                            </li>
+                        }
+                        @if (Raffle.Status == RaffleStatus.Drawn)
+                        {
+                            <li class="mb-[15px]">
+                                <span class="lg:flex uppercase">
+                                    <span class="flex flex-row text-sky-500 font-semibold lg:flex-none lg:w-48">
+                                        <span class="w-[30px] text-sky-500">
+                                            <MaterialIcon Theme="@MaterialIcon.Themes.Outlined" Size="16">local_activity</MaterialIcon>
+                                        </span>
+                                        <span class="col-span-7">Winners</span>
+                                    </span>
+                                    <span class="pl-[30px] lg:pl-0 lg:flex-initial font-semibold">
+                                        @Raffle.WinningSelectionCount
+                                    </span>
+                                </span>
+                            </li>
+                        }
+                        @*<li class="mb-[10px]">
+                        <span class="grid grid-cols-1 lg:flex text-xs uppercase">
+                        <span class="lg:flex-none lg:w-48 text-sky-500 font-semibold">
+                        <i class="fa-solid fa-list-check mr-3"></i>Requirements
+                        </span>
+                        <span class="pl-[25px] lg:pl-0 lg:flex-initial font-semibold">
+                        SERIES 1 RED DEVIL TOKEN
+                        </span>
+                        </span>
+                        </li>*@
+                        <li class="mb-[15px]">
+                            <span class="lg:flex uppercase">
+                                <span class="flex flex-row text-sky-500 font-semibold lg:flex-none lg:w-48">
+                                    <span class="w-[30px] text-sky-500">
+                                        <MaterialIcon Theme="@MaterialIcon.Themes.Outlined" Size="16">show_chart</MaterialIcon>
+                                    </span>
+                                    <span class="col-span-7">Status</span>
+                                </span>
+                                <span class="pl-[30px] lg:pl-0 lg:flex-initial font-semibold">
+                                    @(Raffle.EndDate < DateTimeOffset.UtcNow && Raffle.Status == RaffleStatus.InProgress ? "End" : Raffle.Status == RaffleStatus.InProgress ? "In Progress" : Raffle.Status.ToString())
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                @if (!Raffle.DisablePublicEntrance && Raffle.Status == RaffleStatus.InProgress)
+                {
+                    <div class="w-[100%] mx-auto text-center">
+                        <AddEntrantModal @ref="AddEntrantModalComponent" Raffle="@Raffle" OnEntrantCreate="LoadPage" />
+                        <button type="button" @onclick="AddEntrant" class="items-center w-full rounded-md border border-transparent uppercase bg-sky-400 py-[20px] text-md font-bold border text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 hover:bg-sky-500">
+                            Enter Raffle
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    @*SUMMARY SECTION*@
+    @if (!IsInitialLoad)
+    {
+        <div class="relative grid grid-cols-12 gap-y-16 gap-x-8 px-[1.25rem] mobile:px-[1.875rem] xs:px-8">
+
+            <div class="col-span-12 lg:col-span-6 px-1 py-1 hidden mobile:block">
+                <div class="rounded-[0.75rem] p-10 pl-0 pt-[20px]">
+
+                    <h2 class="mt-4 mb-8 font-display text-title font-bold text-title-color">@Raffle.Name</h2>
+
+                    <div class="flex items-center mb-[20px] text-xl">
+
+                        <div class="h-[30px] w-[30px] flex-shrink-0">
+                            <NavLink id="raffle-title-lbtn" href="@GotoProjectDetails(Raffle.ProjectName)" Match="NavLinkMatch.All">
+                                <img class="h-[30px] w-[30px] rounded-full border-[#dddddd]" src="@(string.IsNullOrEmpty(Raffle.RaffleIconUrl) ? "img/android-chrome-96x96.png" : Raffle.RaffleIconUrl)" alt="project icon">
+                            </NavLink>
+                        </div>
+                        <div class="ml-3.5">
+                            <div class="font-bold text-title-color"><NavLink id="raffle-title-lbtn" href="@GotoProjectDetails(Raffle.ProjectName)" Match="NavLinkMatch.All">@Raffle.ProjectName</NavLink></div>
+                        </div>
+
+                    </div>
+
+                    <div class="relative flex flex-wrap justify-left gap-y-12 gap-x-5 px-8 pl-0 mb-[20px]">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=@CurrentUrlEncode" title="Share on Facebook" target="_blank" rel="noopener noreferrer nofollow" class="font-bold text-color-primary mr-[10px] text-base"><i class="fa-brands fa-facebook-f"></i><span class="pl-1.5">FACEBOOK</span></a>
+                        <a href="https://twitter.com/intent/tweet?url=@CurrentUrlEncode&text=@RaffleTitleEncode" title="Share on Twitter" target="_blank" rel="noopener noreferrer nofollow" class="font-bold text-color-primary mr-[10px] text-base"><i class="fa-brands fa-twitter"></i><span class="pl-1.5">TWITTER</span></a>
+                        <a href="mailto:?subject=@Raffle.Name.Replace(" ", "%20")&amp;body=@CurrentUrlEncode" title="Email" target="_blank" rel="noopener noreferrer nofollow" class="font-bold text-color-primary mr-[10px] text-base"><i class="fa-solid fa-envelope"></i><span class="pl-1.5">EMAIL</span></a>
+                    </div>
+                    <div class="text-left">
+                        <button @onclick="DownloadCalendar" class="uppercase font-bold text-color-primary text-base" title="Download Calendar">
+                            <i class="fa-regular fa-calendar-plus"></i><span class="pl-1.5">Add To Calendar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-12 lg:col-span-6 px-1 py-1">
+                <div class="rounded-[0.75rem] py-[50px]">
+                    <p class="text-base leading-[28px]">
+                        <strong>The Raffle</strong><br />
+                        @Raffle.Description
+                    </p>
+                    <br />
+                    <p class="text-base leading-[28px]">
+                        <strong>The Project</strong><br />
+                        @Raffle.ProjectDescription
+                    </p>
+
+                    <p class="mt-[20px]">
+                        <a href="@Raffle.TermsOfUseExternalUrl" target="_blank" class="inline font-bold text-color-primary uppercase mr-[60px]">Term of Use</a>
+                        <a href="@Raffle.PrivacyPolicyExternalURL" target="_blank" class="inline font-bold text-color-primary uppercase">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    }
+</section>
+
+<section class="relative mx-auto bg-[#FAFAFA]">
+    <div class="relative max-w-9xl mx-auto mt-[0px] pt-[50px] px-[1.25rem] mobile:px-[1.875rem]">
+        @if (Entrants.Count > 0)
+        {
+            <div class="relative md:flex justify-left gap-y-16 gap-x-8 xs:px-8 mobile:px-4">
+                <div class="w-full md:w-3/12 text-left">
+                    <h2 class="text-title font-bold tracking-wide text-title-color text-left mb-3">Entries</h2>
+
+                    <div>
+                        <span class="text-neutral-400 font-bold text-base">@Raffle.NumberOfEntrants entries</span><br />
+                        <span class="text-neutral-400 font-bold text-base">Randomization Seed: @Raffle.RandomizeSeed</span>
+                    </div>
+
+
+                    @*screen size 475*@
+                    @if (Raffle.Status == RaffleStatus.Drawn)
+                    {
+                        <div class="flex block mobile:hidden my-[1.25rem]">
+                            <div class="relative w-full">
+                                <input type="search" id="simple-search" @bind="SearchText" class="block p-[1.25rem] w-full z-20 bg-white border border-gray-300 text-gray-500 rounded-lg focus:ring-sky-500 focus:border-sky-500" placeholder="Search">
+                                <button type="button" @onclick="DidIWin" @onblur="@((args) => ResetErrorMessage())" class="absolute top-0 right-0 p-[1.25rem] font-medium text-white bg-sky-400 rounded-r-lg border border-sky-400 hover:bg-sky-500 focus:ring-4 focus:outline-none focus:ring-sky-200">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                    <span class="sr-only">Search</span>
+                                </button>
+                            </div>
+                            @*<div class="relative w-full">
+                    <p class="text-error pl-[40px] pt-[7px]">@Error</p>
+                    </div>*@
+                        </div>
+                    }
+
+
+                </div>
+
+                @if (Raffle.Status == RaffleStatus.Drawn)
+                {
+                    <DidIWinModal @ref="DidIWinModalComponent" />
+                    <div class="w-full md:w-9/12 pt-[1.25rem] md:pt-[0.625rem] hidden mobile:block">
+                        <div class="flex items-center pr-[2.5rem]">
+                            <div class="items-center w-[70%] pl-0 md:pl-[40px]">
+                                <label for="simple-search" class="sr-only">Search</label>
+                                <div class="relative w-full">
+                                    <div class="flex absolute inset-y-0 right-0 items-center pr-3 pointer-events-none">
+                                        <svg aria-hidden="true" class="w-[2.188rem] h-[2.188rem] text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <input type="text" id="simple-search" @bind="SearchText" class="bg-gray-50 border border-gray-300 text-gray-500 rounded-sm focus:ring-gray-300 focus:border-gray-400 block w-full pr-[3.438rem] p-[1.125rem]" placeholder="Search for wallet address or display name" />
+                                </div>
+                            </div>
+                            <div class="w-[25%] pl-[20px]">
+                                <button type="button" @onclick="DidIWin" @onblur="@((args) => ResetErrorMessage())" class="whitespace-nowrap inline-flex items-center rounded-md border border-transparent uppercase bg-sky-400 px-[3.75rem] py-[0.938rem] font-bold border text-white text-[1.25rem] shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 hover:bg-sky-500">
+                                    Did I Win?
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-error pl-[40px] pt-[7px]">@Error</p>
+                    </div>
+                }
+            </div>
+
+            @*ENTRANT VIEW TAB SECTION*@
+            @if (Raffle.Status == RaffleStatus.Drawn)
+            {
+                <div class="relative flex justify-right gap-y-16 gap-x-8 xs:px-8 mobile:px-4 mt-[20px] hidden mobile:block">
+                    <div class="w-full">
+                        <div class="text-right">
+                            <label class="font-bold uppercase pr-2.5">View:</label>
+                            <button type="button" @onclick="()=> ViewToggle(true)" disabled=@this.IsLoading class="w-[180px] items-center mr-8 rounded-md border border-transparent uppercase py-2 font-bold focus:outline-none shadow-sm @(IsViewAllParticipant ? "bg-sky-400 text-white hover:bg-sky-400 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2" : "text-neutral-300 border-neutral-300 ring-offset-2 hover:text-neutral-400 hover:border-neutral-400 hover:border-2")">
+                                All Participants
+                            </button>
+                            <button type="button" @onclick="()=> ViewToggle(false)" disabled=@this.IsLoading class="w-[180px] items-center mr-8 rounded-md border border-transparent uppercase py-2 font-bold focus:outline-none shadow-sm  @(!IsViewAllParticipant ? "bg-sky-400 text-white hover:bg-sky-400 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2" : "text-neutral-300 border-neutral-300 ring-offset-2 hover:text-neutral-400 hover:border-neutral-400 hover:border-2")">
+                                Winners
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    @*<div class="w-full text-right">
+                        <div>
+                            <label for="view-ddl" class="font-bold uppercase pr-2.5">View:</label>
+                        </div>
+                        <div>
+                            <select id="view-ddl" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5">
+                                <option selected>All Participants</option>
+                                <option value="US">Winners</option>
+                            </select>
+                        </div>
+                    </div>*@
+
+                    <div class="text-sm text-center text-gray-500 font-bold uppercase mt-[1.875rem] block mobile:hidden">
+                        <ul class="flex flex-wrap -mb-px">
+                            <li class="mr-2">
+                                <a href="javascript: void(0);" @onclick="()=> ViewToggle(true)" disabled=@this.IsLoading class="inline-block p-4 rounded-t-lg border-b-2 @(IsViewAllParticipant ? "text-sky-500 border-sky-500 active" : "border-transparent hover:text-gray-600 hover:border-gray-300")" aria-current="@(IsViewAllParticipant ? "page" : "false")">All Participants</a>
+                            </li>
+                            <li class="mr-2">
+                                <a href="javascript: void(0);" @onclick="()=> ViewToggle(false)" disabled=@this.IsLoading class="inline-block p-4 rounded-t-lg border-b-2 @(!IsViewAllParticipant ? "text-sky-500 border-sky-500 active" : "border-transparent hover:text-gray-600 hover:border-gray-300")" aria-current="@(!IsViewAllParticipant ? "page" : "false")">Winners</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            }
+        }
+
+        @*ENTRANTS SECTION*@
+        <div class="px-0 sm:px-6 lg:px-8">
+            <div class="mt-8 flex flex-col">
+                <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="inline-block min-w-full py-2 align-middle px-0 mobile:px-[1.25rem]">
+
+                        @if (Entrants.Count > 0)
+                        {
+                            <table class="min-w-full divide-y divide-gray-300">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-base mobile:text-xl font-bold sm:pl-6 md:pl-0">#</th>
+                                        <th scope="col" class="py-3.5 px-3 text-left text-base mobile:text-xl font-bold">Participants</th>
+                                        <th scope="col" class="py-3.5 px-3 text-left text-base mobile:text-xl font-bold hidden mobile:table-cell">Twitter</th>
+                                        <th scope="col" class="py-3.5 px-3 text-left text-base mobile:text-xl font-bold hidden mobile:table-cell">Discord</th>
+                                        <th scope="col" class="py-3.5 px-3 text-left text-base mobile:text-xl font-bold text-right">Date Entered</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    @foreach (var item in Entrants)
+                                    {
+                                        <tr>
+                                            <td class="whitespace-nowrap py-4 pl-4 pr-3  sm:pl-6 md:pl-0">@item.EntrantSequence</td>
+                                            <td class="whitespace-nowrap py-4 px-3">
+                                                <div class="items-center hidden mobile:flex">
+                                                    <div class="h-10 w-10 flex-shrink-0">
+                                                        <img class="h-10 w-10 rounded-full" src="@(string.IsNullOrEmpty(item.AvatarUrl) ? "img/default-avatar.png" : item.AvatarUrl)" alt="avatar">
+                                                    </div>
+                                                    <div class="ml-4">
+                                                        <span class="block">@item.DisplayName</span>
+                                                        <span class="">@item.WalletAddress</span>
+                                                    </div>
+                                                </div>
+                                                <span class="block mobile:hidden">@item.DisplayName</span>
+                                            </td>
+                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 sm:pl-6 md:pl-[15px] hidden mobile:table-cell">@item.Twitter</td>
+                                            <td class="whitespace-nowrap py-4 pl-4 pr-3 sm:pl-6 md:pl-[15px] hidden mobile:table-cell">@item.Discord</td>
+                                            <td class="whitespace-nowrap py-4 px-3 text-right">@String.Format("{0:MM/dd/yyyy}", item.CreatedAt.ToLocalTime())</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+
+                        <Pagination @ref="PaginationComponent" PageSize="@DefaultPageSize" OnPaging="LoadPage" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ActivityLogModal @ref="ActivityLogModalComponent" Raffle="@Raffle" />
+        <div class="flex justify-center pb-[65px]">
+            <div class="relative mobile:flex justify-center gap-y-16 gap-x-8 xs:px-8 px-4 mt-[3.125rem] w-[80%]">
+                @if (Entrants.Count > 0)
+                {
+                    <div class="w-full mobile:w-[33%] py-[0.625rem] mobile:py-0 text-center uppercase font-bold text-color-primary">
+                        <a class="cursor-pointer underline hover:no-underline" @onclick="DownloadEntrants">Download Data Source</a>
+                    </div>
+                }
+                @if (Raffle.Status == RaffleStatus.Drawn)
+                {
+                    <div class="w-full mobile:w-[33%] py-[0.625rem] mobile:py-0 text-center uppercase font-bold text-color-primary">
+                        <a class="cursor-pointer underline hover:no-underline" @onclick="DownloadWinners">Download Winning Data Source</a>
+                    </div>
+                }
+                @if (!IsInitialLoad)
+                {
+                    <div class="w-full mobile:w-[33%] py-[0.625rem] mobile:py-0 text-center uppercase font-bold text-color-primary">
+                        <a class="cursor-pointer underline hover:no-underline" @onclick="ViewActivities">View Activity</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

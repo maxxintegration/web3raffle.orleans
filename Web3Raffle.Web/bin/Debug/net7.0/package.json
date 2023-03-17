@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "ui:dev": "npx tailwindcss -c tailwind.config.js -i ./tailwind.input.css -o ./wwwroot/css/app.css --watch",
+    "ui:build": "npx tailwindcss -c tailwind.config.js -i ./tailwind.input.css -o ./wwwroot/css/app.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.7"
+  }
+}

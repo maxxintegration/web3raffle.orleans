@@ -1,0 +1,405 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\obj\\Debug\\net7.0\\build-gz\\W6wOijh+.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Web3raffle.Web..Client.styles.css",
+      "PackagePath": "staticwebassets\\Web3raffle.Web..Client.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\markdown.css",
+      "PackagePath": "staticwebassets\\css\\markdown.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\css\\typography.css",
+      "PackagePath": "staticwebassets\\css\\typography.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\Details.png",
+      "PackagePath": "staticwebassets\\img\\Details.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\android-chrome-96x96.png",
+      "PackagePath": "staticwebassets\\img\\android-chrome-96x96.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\img\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\blazor.svg",
+      "PackagePath": "staticwebassets\\img\\blazor.svg"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\check.jpg",
+      "PackagePath": "staticwebassets\\img\\check.jpg"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\coin-1.png",
+      "PackagePath": "staticwebassets\\img\\coin-1.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\coin-2.png",
+      "PackagePath": "staticwebassets\\img\\coin-2.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\coin-3.png",
+      "PackagePath": "staticwebassets\\img\\coin-3.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\coin-4.png",
+      "PackagePath": "staticwebassets\\img\\coin-4.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\coin-5.png",
+      "PackagePath": "staticwebassets\\img\\coin-5.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\coin-6.png",
+      "PackagePath": "staticwebassets\\img\\coin-6.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\default-avatar.png",
+      "PackagePath": "staticwebassets\\img\\default-avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\emoji-sad.png",
+      "PackagePath": "staticwebassets\\img\\emoji-sad.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\img\\favicon-16x16.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\img\\favicon-32x32.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\hero-main.png",
+      "PackagePath": "staticwebassets\\img\\hero-main.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\hero.png",
+      "PackagePath": "staticwebassets\\img\\hero.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\icon-download-activity.png",
+      "PackagePath": "staticwebassets\\img\\icon-download-activity.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\icon-download-winners.png",
+      "PackagePath": "staticwebassets\\img\\icon-download-winners.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\icon-download.png",
+      "PackagePath": "staticwebassets\\img\\icon-download.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\logo-large.png",
+      "PackagePath": "staticwebassets\\img\\logo-large.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\mstile-150x150.png",
+      "PackagePath": "staticwebassets\\img\\mstile-150x150.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\party-popper.png",
+      "PackagePath": "staticwebassets\\img\\party-popper.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\social.png",
+      "PackagePath": "staticwebassets\\img\\social.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\status-loser-image.png",
+      "PackagePath": "staticwebassets\\img\\status-loser-image.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\status-winner-image.png",
+      "PackagePath": "staticwebassets\\img\\status-winner-image.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\ticket-1.png",
+      "PackagePath": "staticwebassets\\img\\ticket-1.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\ticket-2.png",
+      "PackagePath": "staticwebassets\\img\\ticket-2.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\img\\ticket-3.png",
+      "PackagePath": "staticwebassets\\img\\ticket-3.png"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\regular.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\solid.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\v5-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\all.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\all.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\brands.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\brands.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\brands.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\brands.min.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\conflict-detection.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\conflict-detection.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\conflict-detection.min.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\fontawesome.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\fontawesome.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\fontawesome.min.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\regular.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\regular.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\regular.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\regular.min.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\solid.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\solid.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\solid.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\solid.min.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\v4-shims.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\v4-shims.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\js\\v4-shims.min.js",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\js\\v4-shims.min.js"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\sprites\\brands.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\brands.svg"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\sprites\\regular.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\sprites\\solid.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\sprites\\solid.svg"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\lib\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\Users\\goods\\OneDrive\\Documents\\Dev\\Projects\\web3raffle.orlean\\Web3Raffle.Web.Client\\wwwroot\\video\\logo-webm.webm",
+      "PackagePath": "staticwebassets\\video\\logo-webm.webm"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Web3raffle.Web..Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Web3raffle.Web..Client.props",
+      "PackagePath": "build\\Web3raffle.Web..Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Web3raffle.Web..Client.props",
+      "PackagePath": "buildMultiTargeting\\Web3raffle.Web..Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Web3raffle.Web..Client.props",
+      "PackagePath": "buildTransitive\\Web3raffle.Web..Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

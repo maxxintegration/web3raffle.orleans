@@ -1,0 +1,129 @@
+﻿@if (ShowDialog)
+{
+    <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <!--
+          Background backdrop, show/hide based on modal state.
+
+          Entering: "ease-out duration-300"
+            From: "opacity-0"
+            To: "opacity-100"
+          Leaving: "ease-in duration-200"
+            From: "opacity-100"
+            To: "opacity-0"
+        -->
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <!--
+                  Modal panel, show/hide based on modal state.
+
+                  Entering: "ease-out duration-300"
+                    From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    To: "opacity-100 translate-y-0 sm:scale-100"
+                  Leaving: "ease-in duration-200"
+                    From: "opacity-100 translate-y-0 sm:scale-100"
+                    To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                -->
+                <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                    <div>
+
+                        <!--
+                          This example requires some changes to your config:
+
+                          ```
+                          // tailwind.config.js
+                          module.exports = {
+                            // ...
+                            plugins: [
+                              // ...
+                              require('@tailwindcss/forms'),
+                            ],
+                          }
+                          ```
+                        -->
+                        <!--
+                          This example requires updating your template:
+
+                          ```
+                          <html class="h-full bg-gray-50">
+                          <body class="h-full">
+                          ```
+                        -->
+                        <div class="flex min-h-full flex-col justify-center pt-[15px]">
+                            <div class="sm:mx-auto sm:w-full sm:max-w-md">
+
+                                @if (IsSearching)
+                                {
+                                    <div class="text-center">
+                                        <h2 class="text-left text-xl font-black tracking-tight text-title-color mb-[15px] text-center">Checking for winning</h2>
+                                        <div class="relative lds-ellipsis top-[-20px]"><div></div><div></div><div></div><div></div></div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <h2 class="text-left text-xl font-black tracking-tight text-title-color mb-[15px] text-center">
+                                        @if (this.Entrants.Count == 0)
+                                        {
+                                            <span class="relative block">
+                                                <span class="relative block"><span class="inline mr-[10px]">Sorry</span><img src="/img/emoji-sad.png" class="inline relative w-[25px] top-[-5px]" /></span>
+                                                <span class="block">you're not a winner.</span>
+                                            </span>
+
+                                        }
+                                        else
+                                        {
+                                            <span class="relative block">
+                                                <span class="relative block"><span class="inline mr-[10px]">Congratulations</span><img src="/img/party-popper.png" class="inline relative w-[25px] top-[-5px]" /></span>
+                                                <span class="block">you're a winner!</span>
+                                            </span>
+                                        }
+                                    </h2>                               
+                                    <p class="text-center">
+                                      <small class="text-neutral-400">
+                                            @if (this.Entrants.Count == 0)
+                                            {
+                                                <span>Thank you for participating in the raffle.  Be sure to enter other raffles on Web3rffle!</span>
+                                            }
+                                            else
+                                            {
+                                                <span>@Entrants.Count of your @(Entrants.Count > 1 ? "entry was" : "entries were") selected in this raffle.</span>
+                                            }                                        
+                                      </small>
+                                    </p>
+                                    @if (this.Entrants.Count > 0)
+                                    {
+                                        <table class="text-center text-sm mt-[20px] w-[100%]">
+                                          <thead>
+                                              <tr>
+                                                    <th>Entrant ID</th>
+                                                    <th>Date Entered</th>
+                                                    <th>Entrant</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                            @foreach(var entrant in this.Entrants)
+                                            {
+                                                <tr>
+                                                    <td>@entrant.Id.Split("-")[0]</td>
+                                                    <td>@string.Format("{0:MM/dd/yyyy}", entrant.CreatedAt)</td>
+                                                    <td>@entrant.EntrantSequence of @Raffle.NumberOfEntrants</td>
+                                                </tr>
+                                            }
+                                          </tbody>
+                                        </table>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5 sm:mt-6 px-[10px]">
+                        <div class="text-right">
+                            <a @onclick="Close" class="justify-center px-4 py-2 text-base font-medium text-sky-400 cursor-pointer sm:mt-0 sm:text-sm underline hover:no-underline">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

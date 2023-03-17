@@ -1,0 +1,39 @@
+﻿@inherits BaseLayoutBase
+
+@Body
+
+@*FOOTER*@
+<footer class="relative bg-footer">
+    <div class="relative mx-auto mt-[-37px] p-4 max-w-[95.5rem] md:flex md:items-center md:justify-between md:p-6 py-[1.25rem]">
+        <div>
+            <ul class="flex-wrap items-center mt-3 text-gray-500 dark:text-gray-400 sm:mt-0 px-3 hidden md:flex">
+                <li>
+                    <NavLink id="raffle-image-lbtn" href="/terms-of-use" class="mr-4 hover:underline md:mr-6 text-white" Match="NavLinkMatch.All">
+                        Term of Use
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink id="raffle-image-lbtn" href="/privacy-policy" class="mr-4 hover:underline md:mr-6 text-white" Match="NavLinkMatch.All">
+                        Privacy Policy
+                    </NavLink>
+                </li>
+            </ul>
+
+            <div class="block md:hidden text-center">
+                <NavLink id="raffle-image-lbtn" href="/terms-of-use" class="mr-4 hover:underline md:mr-6 text-white" Match="NavLinkMatch.All">
+                    Term of Use
+                </NavLink>
+                <NavLink id="raffle-image-lbtn" href="/privacy-policy" class="mr-4 hover:underline md:mr-6 text-white" Match="NavLinkMatch.All">
+                    Privacy Policy
+                </NavLink>
+            </div>
+        </div>
+        <div class="mt-[0.625rem] md:mt-0 text-center md:text-right">
+            <span class="text-white pl-[.8rem] pb-4 block sm:pb-0">
+                <NavLink id="raffle-image-lbtn" href="/" class="mr-4 hover:underline md:mr-6 text-white" Match="NavLinkMatch.All">
+                    © 2022 Web3Raffle. All right reserved.
+                </NavLink>
+            </span>
+        </div>
+    </div>
+</footer>
